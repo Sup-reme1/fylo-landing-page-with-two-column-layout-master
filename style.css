@@ -1,8 +1,14 @@
 .container{
     margin-left: auto;
     margin-right: auto;
-    width: 1024px;
+    width: 100%;
     
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 a, li, p, h1, h2, h3{
@@ -18,15 +24,32 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0px;
+    margin: 10px 0px 30px;
     padding: 20px 0px;
 }
-.nav_links li{
+.nav_links{
     padding: 0px 10px;
-    display: inline-block;
+    list-style: none;
+    display: flex;
+    align-items: center;
     color: black;
 }
+.nav_links a{
+    padding-inline: 5px;
+}
 
+
+@media (width < 401px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 1rem;
+        background-color: aqua;
+    }
+
+}
 
 
 /* display flex for header elememnt tags */
@@ -92,9 +115,9 @@ aside{
     margin: 30px auto 10px 0px;
 }
 
-.icon {
+/* .icon {
     
-}
+} */
 
 
 /* styling of section 2 */
