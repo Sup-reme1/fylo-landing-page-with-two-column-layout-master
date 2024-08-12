@@ -51,6 +51,7 @@ img{
     text-wrap: nowrap;
 }
 
+
 footer{
     background-color: var(--primary-dark-blue);
     text-align: left;
@@ -58,6 +59,8 @@ footer{
     color: var(--neutral-light-gray);
     font-family: var(--body-font);
 }
+
+
 
 footer ul{
     list-style: none;
