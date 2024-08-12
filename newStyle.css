@@ -16,21 +16,24 @@
     box-sizing: border-box;
 }
 
-.container{
-    width: 375px;
+body{
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
     font-size: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 10px;
+    padding-top: 30px;
 }
 
 img{
-    font-size: 1rem;
-    width: 60%;
+    /* font-size: 1rem; */
 }
 
 .nav_links{
@@ -40,16 +43,185 @@ img{
 
 .nav_links li{
     list-style: none;
-    padding: 0px 10px;
 }
 
 .nav_links a{
     text-decoration: none;
     font-size: 1rem;
     font-family: var(--body-font);
-    color: navy;
+    color: var(--primary-dark-blue);
     text-wrap: nowrap;
+    padding:  0 10px;
 }
+
+header{
+    padding: 30px 10px;
+    text-align: center;
+}
+
+.main-img{
+    margin-bottom: 4rem;
+}
+
+.main-text{
+    font-family: var(--heading-font);
+    color: var(--primary-dark-blue);
+    text-align: center;
+    font-weight: 700;
+}
+
+.main-text h1{
+    margin-bottom: 30px;
+}
+
+.main-text p{
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: var(--body-font);
+    font-weight: 400;
+
+}
+
+.email-form{
+    margin-bottom: 1rem;
+    padding: 1rem 50% 1rem 5%;
+    border-radius: .5rem;
+    border: .13rem solid var(--primary-dark-blue);
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+button{
+    padding: 1rem 40%;
+    border-radius: .5rem;
+    border: 0;
+    background-color: var(--accent-bright-blue);
+    color: white;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.section1{
+    background-color: var(--neutral-grayish-blue);
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.text h1{
+    text-align: center;
+    font-family: var(--heading-font);
+    color: var(--primary-dark-blue);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.text p{
+    margin-bottom: 30px;
+    text-align: left;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--neutral-light-gray);
+    padding-left: 1rem;
+}
+
+.text a{
+    color: var(--accent-moderate-cyan);
+    font-family: var(--body-font);
+    font-weight: 500;
+}
+
+aside{
+    background-color: white;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    border-radius: .3rem;
+    padding: 1.8rem;
+    margin-top: 1rem;
+}
+
+aside img{
+    font-family: var(--heading-font);
+    border-radius: 0;
+}
+
+.segment p{
+    font-family: var(--heading-font);
+    font-size: 1rem;
+    color: var(--primary-desaturated-blue);
+    font-weight: 500;
+}
+
+.flex{
+    display: flex;
+    align-content: center;
+}
+.flex img{
+    border-radius: 3rem;
+}
+
+.avatar{
+    padding-left: 1rem;
+    padding-top: .2rem;
+    font-family: var(--heading-font);
+    font-size: .8rem;
+    color: var(--primary-dark-blue);
+}
+.avatar p{
+    font-size: .6rem;
+    padding-top: .3rem;
+    padding-left: 0;
+}
+
+.section2{
+    background-color: var(--primary-desaturated-blue);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.section2 h2{
+    padding: 3rem 0 1rem;
+    font-family: var(--heading-font);
+}
+
+.section2 p{
+    padding-bottom: 3rem;
+    font-family: var(--body-font);
+    font-size: 1.2rem;
+}
+
+.main input{
+    padding: 10px 40px 10px 10px ;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    border: 0;
+    width: 25rem;
+    font-family: var(--body-font);
+    font-size: .8rem;
+    color: var(--neutral-light-gray);
+}
+
+.main button{
+    padding: 1rem 0%;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
+    border: 0;
+    width: 25rem;
+    margin-bottom: 5rem;
+    font-size: .8rem;
+
+}
+
 
 
 footer{
@@ -59,8 +231,6 @@ footer{
     color: var(--neutral-light-gray);
     font-family: var(--body-font);
 }
-
-
 
 footer ul{
     list-style: none;
@@ -99,4 +269,10 @@ footer li{
 
 .attribution{
     text-align: center;
+
+@media (width > 768px){
+    body{
+        background-color: var(--neutral-light-gray);
+    }
+
 }
