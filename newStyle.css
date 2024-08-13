@@ -33,7 +33,7 @@ nav{
 }
 
 img{
-    /* font-size: 1rem; */
+    font-size: 1rem;
 }
 
 .nav_links{
@@ -67,11 +67,11 @@ header{
     font-family: var(--heading-font);
     color: var(--primary-dark-blue);
     text-align: center;
-    font-weight: 700;
 }
 
 .main-text h1{
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .main-text p{
@@ -183,7 +183,7 @@ aside img{
 .section2{
     background-color: var(--primary-desaturated-blue);
     padding: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
     color: white;
     text-align: center;
     padding-top: 4rem;
@@ -226,7 +226,6 @@ aside img{
 
 footer{
     background-color: var(--primary-dark-blue);
-    text-align: left;
     padding: 10%;
     color: var(--neutral-light-gray);
     font-family: var(--body-font);
@@ -236,18 +235,15 @@ footer ul{
     list-style: none;
 }
 
-footer li{
-
-}
 
 .footer_flex{
     display: flex;
+    flex-direction: column;
 }
 
 
 .footer_flex img{
-    width: 40px;
-    padding: 10px 10px 10px 0;
+    padding: 0 10px 0 0;
 }
 
 .footer_flex p{
@@ -255,13 +251,15 @@ footer li{
 }
 
 .footer_list{
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 20px;
 }
 
 .social_icon{
     border-radius: 20px;
     justify-content: center;
+    flex-direction: row;
+    padding-top: 10px;
 }
 .social_icon a{
     text-decoration: none;
@@ -269,10 +267,53 @@ footer li{
 
 .attribution{
     text-align: center;
+}
 
 @media (width > 768px){
     body{
-        background-color: var(--neutral-light-gray);
+        font-family: var(--body-font);
     }
 
+    header{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .main-img{
+        max-width: 50%;
+    }
+
+    .main-text{
+        max-width: 50%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-text p{
+        text-align: left;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    .form-button{
+        display: flex;
+        max-width: 20%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .email-form{
+        flex: 60%;
+        padding: 10px 50px 10px 10px;
+        margin: 0;
+    }
+    .form-button button{
+        flex: 20%;
+        padding: 10px 50px 10px 50px;
+        margin: 0;
+    }
 }
