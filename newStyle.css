@@ -7,7 +7,7 @@
     --neutral-light-gray :   hsl(0, 0%, 75%);
     --heading-font : "Raleway", sans-serif;
     --body-font : "Open Sans", sans-serif;
-
+    --max-width : 1200px;
 }
 
 *{
@@ -19,7 +19,6 @@
 body{
     margin-left: auto;
     margin-right: auto;
-    width: auto;
     font-size: 16px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -30,10 +29,15 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
+    width: 100%;
 }
 
 img{
     font-size: 1rem;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    outline: 0;
 }
 
 .nav_links{
@@ -57,6 +61,7 @@ img{
 header{
     padding: 30px 10px;
     text-align: center;
+    max-width: 100%;
 }
 
 .main-img{
@@ -84,16 +89,18 @@ header{
 
 .email-form{
     margin-bottom: 1rem;
-    padding: 1rem 50% 1rem 5%;
+    padding: 1rem 8.5rem 1rem 1rem;
     border-radius: .5rem;
     border: .13rem solid var(--primary-dark-blue);
     font-family: var(--body-font);
     font-size: 1rem;
+    width: 100%;
 }
 
 button{
-    padding: 1rem 40%;
-    border-radius: .5rem;
+    padding: 1rem 8rem;
+    width: 100%;
+    border-radius: 10px;
     border: 0;
     background-color: var(--accent-bright-blue);
     color: white;
@@ -101,6 +108,11 @@ button{
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 3rem;
+    text-wrap: nowrap;
+}
+.float{
+    margin: 0;
+    padding: 0;
 }
 
 .section1{
@@ -108,7 +120,9 @@ button{
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
+    margin-top: 0;
     text-align: center;
+    max-width: 100%;
 }
 
 .text h1{
@@ -145,6 +159,7 @@ aside{
     border-radius: .3rem;
     padding: 1.8rem;
     margin-top: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 aside img{
@@ -187,6 +202,7 @@ aside img{
     color: white;
     text-align: center;
     padding-top: 4rem;
+    max-width: 100%;
 }
 
 .section2 h2{
@@ -201,24 +217,27 @@ aside img{
 }
 
 .main input{
-    padding: 10px 40px 10px 10px ;
-    margin-bottom: 1rem;
-    border-radius: .3rem;
+    padding: 10px 9rem 10px 1rem ;
+    border-radius: 10px;
     border: 0;
-    width: 25rem;
+    margin: 0;
+    width: 100%;
     font-family: var(--body-font);
     font-size: .8rem;
     color: var(--neutral-light-gray);
+    margin-bottom: 1rem;
 }
 
 .main button{
-    padding: 1rem 0%;
+    padding: 1rem 5rem;
     margin-bottom: 1rem;
-    border-radius: .3rem;
+    border-radius: 10px;
     border: 0;
-    width: 25rem;
+    margin: 0;
+    width: 100%;
     margin-bottom: 5rem;
-    font-size: .8rem;
+    font-size: 1rem;
+    /* text-wrap: nowrap; */
 
 }
 
@@ -229,6 +248,7 @@ footer{
     padding: 10%;
     color: var(--neutral-light-gray);
     font-family: var(--body-font);
+    max-width: 100%;
 }
 
 footer ul{
@@ -272,6 +292,7 @@ footer ul{
 @media (width > 768px){
     body{
         font-family: var(--body-font);
+        max-width: var(--max-width);
     }
 
     header{
@@ -279,6 +300,7 @@ footer ul{
         flex-direction: row-reverse;
         align-items: center;
         justify-content: space-between;
+        max-width: var(--max-width);
         
     }
 
@@ -291,29 +313,178 @@ footer ul{
         text-align: left;
         padding: 0;
         margin: 0;
+        font-weight: 700;
+    }
+
+    .main-text h1{
+        margin-bottom: 8px;
     }
 
     .main-text p{
         text-align: left;
+        padding: 0;
         padding-bottom: 10px;
         margin: 0;
     }
 
     .form-button{
         display: flex;
-        max-width: 20%;
-        padding: 0;
-        margin: 0;
+        max-width: 0;
     }
 
     .email-form{
-        flex: 60%;
-        padding: 10px 50px 10px 10px;
         margin: 0;
+        padding: 0;
+        width: 20rem;
+        padding: 4px 4rem 4px 2rem;
+        outline: 1px solid var(--primary-dark-blue);
+        border: 0;
+        border-radius: .2rem;
+        color: var(--primary-desaturated-blue);
+        margin-right: 10px;
     }
     .form-button button{
-        flex: 20%;
-        padding: 10px 50px 10px 50px;
         margin: 0;
+        padding: 0;
+        width: 20rem;
+        padding: 4px 10px 4px;
+        border-radius: .2rem;
+        font-size: .7rem;
+        font-weight: 300;
+    }
+
+    .section1{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section1 .main-img{
+        order: 2;
+        width: 50%;
+    }
+
+    .flex{
+        order: 1;
+        width: 50%;
+    }
+
+    .text{
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    .text h1{
+        text-align: left;
+    }
+    .text p{
+        padding-left: 0;
+    }
+    .text a{
+        vertical-align: sub;
+    }
+
+    .segment{
+        margin: 0;
+        margin-top: 40px;
+        position: relative;
+        left: 10px;
+    }
+
+    .section2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 10px 80px;
+    }
+
+    .section2 div{
+        width: 50%;
+        padding: 0;
+        margin: 0;
+        padding: 0 10px 0;
+    }
+
+    .section2-body h2{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-family: var(--body-font);
+    }
+    .section2-body p{
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .section2-body{
+        text-align: left;
+        padding-right: 10px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    .main input{
+        margin: 0;
+        border-radius: .3rem;
+        
+    }
+    .main button{
+        margin: 0;
+        padding: 0;
+        width: 50%;
+        border-radius: .3rem;
+        padding: 12px 0 12px;
+        font-family: var(--body-font);
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    footer{
+        padding: 80px 20px 30px;
+    }
+    .foot-flex{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        padding-bottom: 20px;
+    }
+
+    .list-1{
+        width: 30%;
+    }
+    
+    .list-1 li{
+        margin-bottom: 10px;
+        vertical-align: middle;
+    }
+    
+
+    .list-2{
+        width: 20%;
+    }
+
+    .list-3{
+        width: 20%;
+    }
+
+    .list-4{
+        display: flex;
+        width: 20%;
+        align-items: flex-start;
+    }
+
+    .list-4 img{
+        border: 1px solid black;
+        border-radius: 40%;
+        padding: 0;
+        margin: 10px;
     }
 }
